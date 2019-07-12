@@ -1,0 +1,8 @@
+﻿<div>
+    <span>Passed in Name from secondController: {{$ctrl.hero.name}}</span>
+    <br/>
+    <div>Message Text:</div>
+    <input type='text' ng-model="$ctrl.mynewvalue"/>
+    <br />
+    <button ng-click="$ctrl.calbak({ parm1: $ctrl.mynewvalue })">Add Msg CallBack</button>
+</div>

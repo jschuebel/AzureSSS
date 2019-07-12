@@ -1,0 +1,20 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="Index" class="navbar-brand">Brand</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="homenav">
+                <li><a ng-class="{ ractive: $ctrl.isActive('/home', '/home')}"  href="#!/home">Home/Quiz</a></li>
+                <li><a ng-class="{ ractive: $ctrl.isActive('/firstPage', '/firstPage')}" href="#!/firstPage">Call First Page</a></li>
+                <li><a ng-class="{ ractive: $ctrl.isActive('/secondPage', '/secondPage')}" href="#!/secondPage">Call Second Page</a></li>
+                <li><a href="/Help/Index"  asp-area="HelpPage">API</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

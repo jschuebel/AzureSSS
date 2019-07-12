@@ -1,0 +1,26 @@
+﻿@*section SPAViews {
+        Html.Partial("_Home")
+    }*@
+@section Scripts{
+@Scripts.Render("~/Scripts/angular.min.js")
+@Scripts.Render("~/Scripts/angular-route.min.js")
+@Scripts.Render("~/Scripts/app/app.js")
+@Scripts.Render("~/Scripts/app/components/homemenu/homemenuController.js")
+@Scripts.Render("~/Scripts/app/components/pageOne/firstController.js")
+@Scripts.Render("~/Scripts/app/components/pageThree/pagethreeComponent.js")
+@Scripts.Render("~/Scripts/app/components/pageTwo/secondController.js")
+@Scripts.Render("~/Scripts/app/components/Quiz/QuizController.js")
+@Scripts.Render("~/Scripts/lazyload.js")
+ 
+<!--script src="/Scripts/app/components/pageOne/firstController.js" type="text/babel" data-presets="es2015,es2017"></script-->
+    
+}
+<div id="bodyContainer" >
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div ng-view></div>
+            </div>
+        </div>
+    </section>
+</div>

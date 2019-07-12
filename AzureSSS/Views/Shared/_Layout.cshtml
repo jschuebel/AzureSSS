@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="TestApp">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Azure Quiz example</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Load Babel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.14.0/babel.min.js"></script>
+    <script src="/Scripts/babelcode.js" type="text/babel" data-presets="es2015,es2017">
+    </script>
+</head>
+<body>
+    <home-menu></home-menu>
+    @Html.Partial("_LoginPartial")
+    <div id="output"></div>
+<div class="container body-content">
+        @RenderBody()
+        @RenderSection("SPAViews", required: false)
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
+    <script>
+     $(function() {
+         $('#xxxxhomenav li a').click(function () {
+             console.log("hit homenav link");
+             $('#homenav li').removeClass();
+           $($(this).attr('href')).addClass('active');
+        });
+     });
+    </script>
+</body>
+</html>

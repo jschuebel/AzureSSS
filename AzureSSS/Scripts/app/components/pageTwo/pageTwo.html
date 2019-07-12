@@ -1,0 +1,24 @@
+﻿<div>
+    <h3>Second Page Displayed Header</h3>
+</div>
+<div>
+    <hero-detail hero="hero" calbak="testmethod(parm1)"></hero-detail>
+    <br />
+    <fieldset>
+        <legend>Second Page Displayed Legend</legend>
+        Mobile Number:
+        <input type="text" ng-model="MobileNumber" />
+        <br />
+        Email ID:
+        <input type="text" ng-model="EmailID"/>
+
+        <button class="btn btn-info btn-lg next option" ng-click="sendText()" >send text to API</button>
+
+        <br/>
+        <div>{{title}}</div>
+        <div>List of Messages:</div>
+        <ul  ng-repeat="msg in messages track by $index">
+            <li>{{$index}} - {{msg}}</li>
+        </ul>
+    </fieldset>
+</div>
