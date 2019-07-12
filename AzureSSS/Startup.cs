@@ -12,6 +12,7 @@ namespace AzureSSS
     {
         public void Configuration(IAppBuilder app)
         {
+            //added comment to test azure devops rebuild
             ConfigureAuth(app);
         }
     }
