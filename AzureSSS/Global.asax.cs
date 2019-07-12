@@ -20,9 +20,9 @@ namespace AzureSSS
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var hq = new HandleQ();
-            ServiceBusQ.DataHandler = hq;
-            ServiceBusQ.Initialize();
+            //var hq = new HandleQ();
+            //ServiceBusQ.DataHandler = hq;
+            //ServiceBusQ.Initialize();
 
         }
     }
